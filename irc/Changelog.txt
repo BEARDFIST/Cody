@@ -1,0 +1,321 @@
+CHANGELOG:  Cody
+
+-----------------Version 317RC2 : 3nd March 2015---------------
+- NEW FEATURE Reload on timeout (sort of works, increased threshold)
+- NEW FEATURE !codynick
+ - now cody can change nick
+- NEW FEATURE !codyghost
+ - now cody can request ghost takedowns
+
+- NOTICE: #roguevector has been temporarily removed until proper timeout handling has been sorted
+
+-----------------Version 317RC1 : 2nd March 2015---------------
+- NEW FEATURE Reload on timeout (running a trial run, not sure it works just yet)
+- DEPRECATED FEATURE memory warning system. Wasn't working very well, may come back later
+
+-----------------Version 316 : 11th February 2015---------------
+- NEW FEATURE Starbound server controls
+ - ability to stop and start the starbound server
+
+- NEW FEATURE memory warning system
+ - issues a warning message when memory load exceeds 90%
+
+- FEATURE UPDATE
+ - Better !cody.diag functionality
+ 
+- Moved back to UBUNTU, because CENTOS sucks balls
+
+-----------------Version 315 : 22th September 2014---------------
+BUG FIX
+- Moved to CentOS, removed Ubuntu specific commands from diag command
+
+-----------------Version 314 : Xth X   2014------------------
+Nobody knows when or what happened here
+
+-----------------Version 313 : 7th May 2014------------------
+- NEW FEATURE CODY GOOGLE
+ - !cody.google now creates a query, so you do not have to open a browser to search google
+
+-----------------Version 313 : 19th January 2014------------------
+- FEATURE UPDATE CODY DIAGNOSTICS
+ - added Memory usage
+ - added server updates available
+
+-----------------Version 312 : 16th January 2014------------------
+- FEATURE UPDATE CODY DIAGNOSTICS
+ - added system uptime
+ - colourcoded output
+
+-----------------Version 311 : 14th January 2014------------------
+- NEW FEATURE CODY DIAGNOSTICS
+ - !cody.diag outputs disk capacity and current cpu usage
+
+-----------------Version 310 : 11th January 2014------------------
+- FEATURE UPDATE
+ - !cody.resolve now also identifies what country the IP is from
+- NEW FEATURE
+ - !cody.action <#channel> <message> makes cody do an action in specified channel
+
+-----------------Version 309 : 5th January 2014------------------
+- NEW FEATURES TEMPORARILY DISABLED DUE TO BAN FROM WEBSITES
+ - cody compliment, cody insult, cody slogan: !cody.compliment <name>
+   Outputs a message for the person of either category
+
+-----------------Version 308 : 5th January 2014------------------
+- BUG FIX
+ - cody compliment, cody insult, cody slogan: !cody.compliment <name>
+   Contained newlines in the output from the websites
+
+-----------------Version 307 : 4th January 2014------------------
+- NEW FEATURES
+ - cody compliment, cody insult, cody slogan: !cody.compliment <name>
+   Outputs a message for the person of either category
+
+-----------------Version 307 : 1st January 2014------------------
+- BUG FIX: CODY CONVERSION
+ - Cody needed to detect if it returned a value or not, after converting the currency. Otherwise it would output "<value> ="
+
+-----------------Version 306 : 19th December 2013------------------
+- BUG FIX: CODY CONVERSION
+ - Cody now converts currency units again.
+
+-----------------Version 305 : 12th October 2013------------------
+- NEW FEATURE PASS FUNCTION CODYTWITTER
+ - Now cody stalks twitter and posts it to #twitter
+ - Has been taken out as of 13th of December 2013, not enough of an impact to warrant a version change
+
+
+-----------------Version 304 : 8th July 2013------------------
+- NEW FEATURE CODY.PORTSCAN <portnumber> <ip or hostname>
+ - This feature sends a synchronization flagged tcp packet using nmap, and awaits a response, or a timeout depending on whether the firewall is stateful or not.
+
+- NEW FEATURE CODY.RESOLVE <hostname.com> or <ipaddress>
+ - runs the "host" command in linux and outputs the result
+
+-----------------Version 303 : 7th July 2013------------------
+- BUG FIXES:
+ - Checking for when cody's files were last updated crashed because an empty field was introduced to the array
+
+- NEW FEATURE: CODY.NAME
+ - Generates a random name for the sake of generating random names
+
+-----------------Version 302 : 22nd June 2013------------------
+- BUG FIXES:
+ - added encoding at top of file to prevent encoding problems when decoding websites
+
+- REWROTE KICKSTARTER
+ - Can now add new kickstarters to track
+
+-----------------Version 301 : 18nd June 2013------------------
+NEW FEATURE: CODY.KICKSTARTER
+- poorly implemented, but suck my balls.
+
+-----------------Version 300 : 22nd April  2013------------------
+- completely rewrote cody to be based on classes.
+
+
+-----------------Version 20X : XXth February 2013------------------
+BUG FIXES:
+ - RSS feed function had problems understanding certain unicode characters, know those characters gets
+removed from the feed, to prevent a crash.
+
+NEW FEATURE: CODY.TIME
+ - Cody can now tell us what time it is in the world
+
+-----------------Version 202 : 11th February 2013------------------
+- FIXED MAJOR BUGS THAT WERE CAUSING CODY TO CRASH:
+ - cody.reload will no longer crash if you supply a space but no scriptname
+ - currency conversion no longer assumes the google result will be a float.
+ - cody's http resolve will now check that the title is not too large to post before posting it.
+
+REWROTE RSS FEEDS
+ - The function will now append to the file until the file reaches 500 lines, at which point it will recreate the file and start over
+ - Now successfully outputs to multiple channels
+ - Now successfully posts the latest feeds (fixed error with indexing)
+
+REMOVED NO_REPEAT_RANDOM()
+ - It was a terrible function that basically just did the same as random.choice() anyway.
+
+
+
+-----------------Version 201 : 3rd February 2013------------------
+- SIGNIFICANT REWRITE OF THE ENTIRE PROGRAM:
+	- All bot functionality is now kept in codyModules.py
+	- All functionality has now been made into callable functions
+ 	- Many functions were improved to make them more modular, or efficient.
+	- Cody is now fully configurable with a notepad readable file called cody.cfg
+
+- IMPROVED !CODY.RELOAD
+   - CodyReload will now attempt to reload the modules file as well as the main file
+   - CodyReload will now successfully post a quit message to IRC
+   - CodyReload will now attempt to compile files before loading them.
+	- Compiler errors are posted into channel
+
+- NEW FEATURE: SUPPORT FOR RSS FEEDS (currently just one specific feed)
+
+- NEW FEATURE: CODY.UPDATES
+   - Cody will constantly check if either his main file or the module file has changed. If they have changed, he will let us know in HOME_CHANNEL. HOME_CHANNEL is   configurable from cody.cfg. the feature can be turned on or off with !cody.updates.
+
+- NEW FEATURE: CODY.GET_TITLE
+   - Cody will now look up the <title></title> of any http link it sees in channel.
+
+- Fixed a major bug that halted the execution of the script while it waited for input from the socket. This prevented all passive functionality from working.
+
+- Fixed a major bug with authentication
+
+- Implemented conversion to cash money. (100 nok in cmo, or 100 euro in cash money).
+
+
+-----------------Version 106 : 13th November 2012------------------
+- NEW FEATURE: CURRENCY CONVERSION
+- !cody.currency uses google calculator via urllib and is limited to 2 decimals of accuracy.
+- Implemented URLLIB error handling for !cody.currency
+- Fixed a lot of crashes that could occur with bad input for !cody.mail and !cody.currency
+- Limited !cody.mail to users in [approvedHosts].
+- !cody.mail now gives error messages if it fails for whatever reason.
+- !cody.currency added to help list
+- !cody.currency removed from help list
+- !cody.currency no longer uses a triggerword. '100 usd in gbp' is now enough to trigger a response
+- !cody.currency now throws an error message if you provide invalid currency as input.
+
+-----------------Version 105 : 11th November 2012------------------
+- NEW FEATURE: !CODY.MAIL 
+- changed the authenticateHost() to only care about the part after the '@' sign.
+- cleaned up a lot of code to make it safer and more efficient.
+- cody.reload will now reload the running version if run without supplying a filename, rather than crashing.
+- Cody is now able to send emails to people using !cody.email.
+- !cody.help now instructs the user on how to get more information about commands.
+- functions that require input from users would crash without input: will now instead provide correct syntax
+	- ex: <Cody> Usage: !cody.feature [your feature request] 
+
+
+
+-----------------Version 104 : 4th November 2012------------------
+
+- NEW FEATURES: !CODY.JOIN, !CODY.PART
+- !cody.version now includes the text "I'm currently running version xxx" rather than just posting "xxx"
+- changed greeting authentication so that Cody doesn't care about hostname, only nick. 
+- created the function authenticateHost() to handle validating hostnames, and authenticateNick() to   handle nickname authentication.
+- added more greetings for Inveracity
+- added greetings for delrio
+- added a confirmation message to cody.join and cody.part
+- changed hiCody to auth nicks instead of hostnames
+
+
+
+-----------------Version 100 : 1st September 2012-----------------
+Fixed noRepeatRandom function:
+	- noRepeatRandom function in modules is no longer making Cody crash.
+	- noRepeatRandom will not pick the same number twice in a row. 	
+	- noRepeatRandom will now successful create db files if they are missing
+	- noRepeatRandom will now recreate db files if length of inputlist has changed since last run.
+
+- cody no longer triggers every five minutes if there is no channel activity
+- now responds to "hai cody"
+- moved all lists outside main loop, to prevent them from reloading every iteration.
+- changed out all 'while i < x' loops with for loops.
+- cleaned the code up significantly
+- it is now possible for Cody to win at pong.
+- fixed !cody.help. now works as intended and will dynamically adjust as more commands are added.
+- moved all botconfig variables out of the main loop to make it easier to make changes to things like bot nickname and auth password
+- added codyQuitTriggers[] to clean up cody.quit. changed syntax a bit.
+- cody.bug and cody.feature now include the nickname of the reporter.
+
+
+-----------------Version 015 : 12th August 2012-----------------
+- Cody now only responds if the trigger and his name are 5 or less
+characters apart, and only if the trigger comes before his name.
+- Cody now joins channel with secretkey
+
+
+-----------------Version 014 : 12th August 2012-----------------
+- NEW FEATURES: !CODY.BUG, !CODY.FEATURE, !CODY.UPTIME
+- Removed TriggerCheck() completely from codyModule.py
+- Added a function for reporting bugs (!cody.bug)
+- Added a function for requesting features (!cody.feature)
+- Cody now knows how long he's been up (!cody.uptime)
+
+
+
+-----------------Version 013 : 12th August 2012-----------------
+- Fixed the performance leak mentioned in version 007 by controlling main while loop with a boolean.
+- Fixed user authentication bug mentioned in version 012 - now checks HOST, not NICK.
+- Fixed the bug with greeting message appearing on bootup mentioned in version 009.
+- Complete overhaul of Cody's main codebase for improved readibility.
+
+
+-----------------Version 012 : 11th August 2012-----------------
+- ADDED DATA PARSER - Cody now knows NICK, HOST, MSG_TYPE, CHANNEL, and MESSAGE for every line of data.
+- triggerCheck() removed from Cody. hiCody rewritten to be more efficient.
+- Rewrote !python.problem to use the randomizer module, when presenting a puzzle
+- Added "permission denied" message when people other than admins tried reloading or quitting Cody
+- KNOWN PROBLEM: user authentication only verifies nickname, not hostname.
+
+
+-----------------Version 011 : 11th August 2012-----------------
+- Added codyModules.py to project
+- New module: triggerCheck(). checks if any of the triggers in a list you pass it exist within the data you pass it.
+- New module: noRepeatRandom(). Generates a random number that has not been used before 100 times, then starts over.
+- New resources: salt.db and antiSalt.db. These contain unused and used seeds.
+- Added user authentication for !cody.quit and !cody.reload
+- Added personalized logon messages for admins
+- Added more !Cody.quit triggers
+- Added more hiCody replies.
+- Cleaned up the code visually
+
+
+-----------------Version 010 : 8th August 2012-----------------
+- fixed bug where "!python.expression sys.exit()" would crash Cody by implementing URLlib error handling.
+
+
+-----------------Version 009 : 8th August 2012-----------------
+- NEW FEATURES: !CODY.VERSION, !CODY.WELCOME
+- Added greeting messages for when an admin joins. Message chosen by random.choice.
+- Added !cody.version that extracts the running scripts number from sys.argv[0]
+- KNOWN PROBLEM: greeting message appears when Cody boots up. Cause unknown.
+
+
+-----------------Version 008 : 7th August 2012-----------------
+- Fixed a bug preventing reloaded scripts from performing new reloads by setting CHMOD +x to script before reload.
+- KNOWN PROBLEM: huge performance leak - reloadCody does not shut down old process properly.
+
+
+-----------------Version 007 : 7th August 2012-----------------
+- NEW FEATURE: !CODY.RELOAD
+- Installed FTP service on the server running Cody for easier upload of new versions
+- Removed FTP and installed dropbox instead. 400% increase in performance.
+- Added !cody.reload - shuts down running script and executes a specified script.
+
+
+-----------------Version 006 : 6th August 2012-----------------
+- NEW FEATURE: !CODY.PYTHON
+- Fixed a bug with auto-AUTH
+- Added !cody.python, a live python interpreter.
+
+
+-----------------Version 005 : 5th August 2012-----------------
+- Cleaned up the code visually
+- Wrote a roadmap outlining what we wanted to implement
+
+
+-----------------Version 004 : 3rd August 2012-----------------
+- NEW FEATURE: !CODY.QUIT
+- Added "!cody quit" command, to get cody to disconnect from irc
+
+
+-----------------Version 003 : 2st August 2012-----------------
+- Added auto-AUTH before joining channel
+
+
+-----------------Version 002 : 30th July 2012-----------------
+- Added more "hi cody" triggers and responses
+
+
+-----------------Version 001 : 29th July 2012-----------------
+- Initial version created that connects to the irc server
+- Replies to PING from server.
+- Joins a specified channel
+- Has manual auth but planning to have auto auth before channel join (to hide hostname with the nickServ autohide on)
+- lmnPong game implemented
+- Responds to "hi cody".
+- Responds to !python.problem with a problem that can be solved by programming it.

@@ -1,0 +1,109 @@
+0. 'null' [lmn]
+
+1. 'null' [lmn]
+1. john should be afraid [lmn]
+
+2. you have a good idea for a 77days relevant feature, please report it using !para.feature [suggestion] [lmn]
+
+3. I'd like an accurate date to know when Daddy comes home :D [sp00k]
+
+4. ability to store and list a set of links and associated descriptions [hitsujitmo]
+
+5. Ability to keep a list of all links and who posted them publicly accessible by anyone who wants to see who's linking what. [GD-ROM]
+
+6. [16:40] <Titan> Can we get cody to provide auto-bitly links for all URLs pasted into the IRC channel? [Inveracity]
+
+7. make a compliment function that spits out a compliment to person: !cody.compliment <name here> [Inveracity]
+
+8. make a slogan function that spits out a slogan with a given name: !cody.slogan <name here> [Inveracity]
+
+9. allow cody to listen to private messages [lmn]
+
+10. implement irc ACTION (/me) [Inveracity]
+
+11. Make own compliments, insults and slogans and put in cfg, instead of using web based service that ban people [Inverlappy]
+
+12. message to nick next time nick joins channels [Inversaurus]
+
+13. using features that don't exist, or alternatively, request them with !cody.feature [Inveracity]
+
+14. improve the cody.title() method: allow channels to have different modes (whitelist mode, blacklist mode), enable whitelist mode title resolves for deadworld, make !cody.title to allow specific authenticated users (cwolf and jargon) to add or remove websites from the whitelist [mln]
+
+15. add http://www.thesalarycalculator.co.uk/salary.php [Inveracity]
+
+16. steam summer sale functionality [lmn]
+
+17. handle netsplits [lmn]
+
+18. a list of all links posted and by whom during a day, presented on a webpage with datestamps [InveracityW]
+
+19. put cody on github? [InveracityW]
+
+20. SSL it up on port 6660 [Inveracity]
+
+21. imdb search function [Inveracity]
+
+22. write a feature called !cody.rename that allows cody to change nick if commanded to do so by his owners [lmn]
+
+23. have cody automatically change name back to Cody after x minutes when he assumes a temp name because of a timeout. [lmn]
+
+24. test [Inveracity]
+
+25. add datestamps to feature and bug listings [Inveracity]
+
+26. do a for loop when compiling modules to fetch errors, fetch files in directory using glob [glob.glob(directory+"*.py")]  [Inveracity]
+
+27. use the logging library to do proper stacktrace logging [Inveracity]
+
+28. log to the dropbox so that the logfile can be view properly. (usage example could be using the powershell command: get-content codylog.txt -wait to tail the log as errors occur) [Inveracity]
+
+29. make a !cody.devmode that puts cody into "dev mode"; leaves all channels but home channel, and enters them again when leaving dev mode [Inveracity]
+
+30. output all errors to home channel aswell as the log, for instant viewing? [Inveracity]
+
+31. implement twisted [Inveracity]
+
+32. cleanup feature and bug [Inveracity]
+
+33. when a function does not exist, make a free enterpretation and do something [Inveracity]
+
+34. when a word in a feature request does not exist, make a free interpretation and do something. [lmn]
+
+35. implement a function that returns a hastebin for a multi-line string. [lmn]
+
+36. allow multi-line return for python expressions [lmn]
+
+37. amazon search, returns a link to the top hit for your query. [lmn]
+
+38. instead of cody.thes, make a cody.synonym and cody.antonym function [lmn]
+
+39. a function that generates a random cat gif [lmn]
+
+40. a coinflip feature [lmn]
+
+41. make the feature request acceptance speech shorter [Inveracity]
+
+42. check if a website is down for everyone or just me - https://isitup.org/ [lmn]
+
+43. get etymology for a word [lmn]
+
+44. a feature to unshorten a short url [lmn]
+
+45. geolocate an ip [lmn]
+
+46. ensure that cody.image returns only direct links to files. [lmn]
+
+47. "cody, when will blablabla?" - "this will never happen" / "this will happen very soon!" / etc..
+
+48. "cody, x or y?" - "random.choice([x, y]) is most certainly the better choice!"
+
+49. "right cody?"  - produce a random answer, yes, no, don't ask me that, etc.
+
+50. "cody, x?" - answer x question in some way.
+
+51. "cody, why ...?" - because z.
+
+51. !cody.markov function
+
+52. !cody.spell [word]   - A: "[word] is spelled correctly" - B: "did you mean: [corrected word] ?"
+

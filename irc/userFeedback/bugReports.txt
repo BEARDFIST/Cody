@@ -1,0 +1,114 @@
+-----------BUG REPORTS-----------
+
+1. test bug [lmn]
+
+2. john is too afraid [lmn]
+
+3. Cody never crashes. [lmn]
+
+4. fix !cody.python to read only the text after the keyword. do not base it on letter counts [lmn]
+
+5. cody.python does not support the "?" character [lmn]
+
+6. the hi.cody function is flawed - "think cody" should not trigger on "hi cody". either detect spaces or reduce allowed distance between trigger and name. [lmn]
+
+9. consider removing cody.problem since it's stupid. [lmn]
+
+8. <Cody> 1 hellameter = 1.0 \x26#215; 10\x3csup\x3e24\x3c/sup\x3e kilometers [lmn]
+
+9. <Cody> 1 barn = 1.0 \x26#215; 10\x3csup\x3e-28\x3c/sup\x3e square meters [lmn]
+
+10. <Cody> 1 fortnight = 336.0 [lmn]
+
+11. cody responds to anything in anything [Inveracity]
+
+12. Request failed: unit not recognized [lmn]
+
+13.  < Cody> 1 nm = 1.0 \x26#215; 10\x3csup\x3e-12\x3c/sup\x3e kilometers [lmn]
+
+14. \u3010Popping\u3011Japan VS Korea \u203b China KOD7\u300e1\u300f - Youtube [lmn]
+
+15. currency conversion using a comma as decimal sign fails, but still outputs an incorrect result. [lmn]
+
+16. currency conversion occasionally omits outputUnit [lmn]
+
+17. change all the hiCodyTriggers to ' hi ' instead of 'hi' [lmn]
+
+18. cody_dev crashes on greeting [lmn]
+
+19. invalid input to the mail function crashes the bot [lmn]
+
+20. invalid input to the mail function crashes the bot [lmn]
+
+21. invalid input to the mail function crashes the bot [lmn]
+
+22. cody 106 doubletriggers on hiCody [lmn]
+
+23. cody 106 doubletriggers on hiCody if you use the trigger "I love you", because that trigger also contains another trigger, "yo". [lmn]
+
+24. fix for doubletrigger is to make the trigger ' yo ' instead of 'yo' [lmn]
+
+25. ValueError: invalid literal for float(): 936.. when doing 1000000 krw in usd [InveracityL]
+
+
+26. can't reload anymore [lmn]
+
+27. apostrophes are gone from hicodyreplies [lmn]
+
+28. john was afraid of this bug [lmn]
+
+29. no bug [lmn]
+
+30. hicody doesn't trigger on 'Cody', only 'cody' [lmn]
+
+31. if you write !cody,reloadconfig, it crashes cody. do not allow this to happen [lmn]
+
+32. hicody doesn't trigger on 'codes', 'Codes' [lmn]
+
+33. verify that there are html tags, and verify that they don't contain junk before doing anything with it. [lmn]
+
+34. cody has a bad smell [lmn]
+
+35. we have a memory leak [lmn]
+
+36. Cody picks up !cody.time commands in non-PRIVMSG messages (such as TOPIC) [delrio]
+
+37. if a line starts with a different trigger, don't respond to mid-sentence triggers [lmn]
+
+38. disneyland is not available in !cody.time calls [lmn]
+
+39. poopidooppoop [Jonkel]
+
+40. why the fuck am I looking for http when I should be looking for www or something. http doesn't even show in the address bar on chrome anymore. [lmn]
+
+41. like http resolve is fucked
+:lmn!lmn@citrusy.goodness PRIVMSG #code :!cody.bug http resolve doesn't even work
+:Jonkel!Jonkel@Jonkel.user.globalgamers.net PRIVMSG #code :how can my chrome lag when loading beardfist
+:lmn!lmn@citrusy.goodness PRIVMSG #code :haha
+:lmn!lmn@citrusy.goodness PRIVMSG #code :I don't know
+:Jonkel!Jonkel@Jonkel.user.globalgamers.net PRIVMSG #code :I don't have a 25.5 kbps modem anymore!! [lmn]
+
+45. CODY BREAKS WHEN YOU USE HTTP [lmn]
+
+46. emails have no body. [lmn]
+
+47. hi Cody doesn't work if Cody has a capital c. hi cody works. [lmn]
+
+48. return syntax of uptime is a bit fucked. says "34 minutes. . I last woke". fix it! [lmn]
+
+49. test [lmn]
+
+50. this function crashes cody [lmn]
+
+51. Cody is stupid etc [lmn]
+
+52. is this the reeaal life [lmn]
+
+53. adding kickstarter campaigns doesn't give a notice, and awaits a newline before outputting anything else [Inveracity]
+
+54. the diag function was specific to ubuntu, needs to be taken out or rewritten [Inverlappy]
+
+55. the dict function no longer works [Inveracity]
+
+56. Not enough bacon Inveracity, needs more bacon. [Kizz]
+
